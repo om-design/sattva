@@ -6,41 +6,41 @@ SATTVA (Semantic Attractor Training of Transforming Vector Associations) is a re
 
 The central claim is that “understanding” can be reframed as a property of an internal landscape: (1) the shape of attractor basins (stable meanings), (2) the trajectories that lead into them (inference/recognition), and (3) the transitions between them (association, planning, creativity).
 
-SATTVA further claims two practical requirements for scalable cognition: (1) many semi-independent “columns” must settle in parallel and reach consensus (in the spirit of Numenta’s Thousand Brains theory), and (2) the system needs continuous anomaly-based self-regulation (in the spirit of HTM anomaly detection as online prediction failure) to prevent runaway dynamics while still permitting creative divergence when desired. [web:764][web:769]
+SATTVA further claims two practical requirements for scalable cognition: (1) many semi-independent “columns” must settle in parallel and reach consensus (in the spirit of Numenta’s Thousand Brains theory), and (2) the system needs continuous anomaly-based self-regulation (in the spirit of HTM anomaly detection as online prediction failure) to prevent runaway dynamics while still permitting creative divergence when desired.
 
 Finally, SATTVA emphasizes *structural creativity*: not just generating diverse samples, but forming genuinely new, reusable semantic basins (new attractors) via controlled divergence followed by consolidation.
 
 ## Key novelties
 
-- Multi-column semantic settling with consensus dynamics (Thousand Brains as a guiding analogy). [web:764][web:778]
-- Task-conditioned anomaly regulation: anomaly can mean “explore” or “stabilize,” depending on goal and context. [web:769]
+- Multi-column semantic settling with consensus dynamics (Thousand Brains as a guiding analogy).
+- Task-conditioned anomaly regulation: anomaly can mean “explore” or “stabilize,” depending on goal and context.
 - Creative basin formation: novelty is validated by stability, reuse, and downstream competence, not just surface diversity.
 
 ## Comparative analysis
 
-This section frames SATTVA’s control-and-creativity proposal in contrast to HC and mHC (Hyper-Connections and Manifold-Constrained Hyper-Connections), which address instability in very deep networks by constraining how signals mix across depth. [web:799][web:796]
+This section frames SATTVA’s control-and-creativity proposal in contrast to HC and mHC (Hyper-Connections and Manifold-Constrained Hyper-Connections), which address instability in very deep networks by constraining how signals mix across depth.
 
 ### What HC is solving
 
-HC broadens the residual pathway into multiple parallel streams and uses learnable mixing to route information across depth, which can increase expressivity but can also amplify signals and destabilize training at scale. [web:799][web:796]
+HC broadens the residual pathway into multiple parallel streams and uses learnable mixing to route information across depth, which can increase expressivity but can also amplify signals and destabilize training at scale.
 
 ### What mHC changes
 
 mHC stabilizes HC by projecting residual mixing matrices onto the manifold of doubly stochastic matrices (the Birkhoff polytope), using a Sinkhorn–Knopp style projection so that residual mixing becomes a convex combination and preserves stable signal propagation through depth. [web:796][web:802][web:804]
 
-In plain terms, HC and mHC treat “runaway amplification” as the core failure mode, and mHC fixes it by forcing the “mixing” geometry to behave conservatively (roughly: preserve magnitude) even in very deep stacks. [web:796][web:804]
+In plain terms, HC and mHC treat “runaway amplification” as the core failure mode, and mHC fixes it by forcing the “mixing” geometry to behave conservatively (roughly: preserve magnitude) even in very deep stacks.
 
 ### How SATTVA differs
 
-SATTVA treats divergence as sometimes desirable (creative search) and sometimes dangerous (loss of coherence), so it adds a task-conditioned regulator that can continuously trade off exploration and stabilization rather than enforcing a single always-on conservation rule. [web:769]
+SATTVA treats divergence as sometimes desirable (creative search) and sometimes dangerous (loss of coherence), so it adds a task-conditioned regulator that can continuously trade off exploration and stabilization rather than enforcing a single always-on conservation rule.
 
-Instead of making the network always behave as if gain must remain near 1, SATTVA aims to permit controlled “excursions” (high novelty / high variance internal trajectories) and then consolidate them into stable, reusable attractors when the task demands commitment. [web:769]
+Instead of making the network always behave as if gain must remain near 1 (as with mHC), SATTVA aims to permit controlled “excursions” (high novelty / high variance internal trajectories) and then consolidate them into stable, reusable attractors when the task demands commitment.
 
-This is a more analog solution: the system can be intentionally permissive during a creative phase and intentionally strict during an execution/safety phase, with the switch governed by an online anomaly signal over internal dynamics. [web:769]
+This is a more analog solution: the system can be intentionally permissive during a creative phase and intentionally strict during an execution/safety phase, with the switch governed by an online anomaly signal over internal dynamics.
 
-### Where this is genuinely novel
+### Where this is genuinely novel - actual machine creativity
 
-The novelty claim is not merely “more diverse output.” It is that novelty can be *structural*: new basins become stable objects in the system’s semantic geometry, meaning the system can revisit, refine, and reliably use them later. [web:769]
+The novelty claim is not merely “more diverse output.” It is that novelty can be *structural*: new basins become stable objects in the system’s semantic geometry, meaning the system can revisit, refine, and reliably use them later.
 
 ---
 
@@ -133,7 +133,7 @@ Numenta’s work is directly relevant to SATTVA because it supplies two compleme
 
 ### Thousand Brains as multi-model consensus
 
-The Thousand Brains Theory proposes that many cortical columns learn models of complete objects and reach a perceptual consensus through a voting-like process across columns. [web:764][web:773][web:778]
+The Thousand Brains Theory proposes that many cortical columns learn models of complete objects and reach a perceptual consensus through a voting-like process across columns.
 
 SATTVA’s “concept columns” can be made more explicit in this light: instead of a single monolithic attractor space, build many semi-independent subspaces (columns/modules) that each settle toward their own attractors, then couple them so the global state converges toward a consistent joint interpretation.
 
@@ -141,9 +141,9 @@ AUM interpretation: “understanding” becomes the stable fixed point of a coup
 
 ### HTM anomaly detection as online stability control
 
-Numenta’s anomaly work frames anomalies as moments when a system’s predictions fail: the model’s predictive error is converted into an anomaly score, and then smoothed/normalized into an anomaly likelihood to reduce false positives in noisy streams. [web:769]
+Numenta’s anomaly work frames anomalies as moments when a system’s predictions fail: the model’s predictive error is converted into an anomaly score, and then smoothed/normalized into an anomaly likelihood to reduce false positives in noisy streams.
 
-Numenta also created the Numenta Anomaly Benchmark (NAB) to evaluate streaming anomaly detection, emphasizing online operation, continuous learning, adaptation to changing “normal,” and early detection. [web:777][web:775]
+Numenta also created the Numenta Anomaly Benchmark (NAB) to evaluate streaming anomaly detection, emphasizing online operation, continuous learning, adaptation to changing “normal,” and early detection.
 
 SATTVA can import this not only as a time-series tool, but as a meta-control principle:
 
@@ -154,7 +154,7 @@ In other words, anomaly detection becomes a quantitative proxy for “loss of sa
 
 ### Task-conditioned anomaly (surprise vs danger)
 
-HTM anomaly detection is a general-purpose signal: it quantifies prediction failure in an online stream. [web:769]
+HTM anomaly detection is a general-purpose signal: it quantifies prediction failure in an online stream.
 
 SATTVA adds an important distinction: anomaly is not always “bad.” It can be interpreted differently depending on goal state and phase of problem solving:
 
@@ -215,15 +215,15 @@ If morphogenesis can be described as collective intelligence navigating a proble
 
 ### 5.4 Note on “Kreinen’s discoveries”
 
-Our discussion referenced “Kreinen’s discoveries” in this bioelectric/collective-intelligence neighborhood.
+Our discussion referenced “Fenna Kreinen’s discoveries” in this bioelectric/collective-intelligence neighborhood.
 
-TODO: Add a concrete citation and a brief factual summary once the exact paper/talk and author spelling are confirmed.
+Specifically, the seed thought from Kreinen is the discovery of fractal structures within the brain rising from the brain stem through to complex formations. The similarity allows for storage and transmission between primitive (foundational) structures and complex (reasoning) structures depending on the conditions and strength of impulse.
 
 ---
 
 ## 6. Structural encoding: analogies to vision
 
-Vision is a strong metaphor because it is simultaneously:
+Vision is the single most highly evolved and elegantly simplistic feature of life on Earth. From all living cells some form of recognition and interaction with light is the fundamental principle and it serves as a strong metaphor for sattva because it is simultaneously:
 
 - geometric (edges, contours, surfaces),
 - hierarchical (local features → global objects),
@@ -307,7 +307,7 @@ Use *sattva* as a design target.
 - Basin separation: distances between attractor states; confusion under noise.
 - Robustness: recall from partial/noisy cues.
 - Transition predictability: cue sequences move reliably between intended basins.
-- Anomaly of internal dynamics: prediction-failure signals over settling trajectories, used to trigger either stabilization or exploratory creativity depending on task. [web:769]
+- Anomaly of internal dynamics: prediction-failure signals over settling trajectories, used to trigger either stabilization or exploratory creativity depending on task.
 
 ---
 
@@ -366,7 +366,7 @@ This motivates:
 
 ## 11. Resonant columns and creativity (strings, harmonics, and new basins)
 
-A central question in the discussion was: how can a system built from attractors do more than recall—how can it become creative?
+A central question in the discussion is: how can a system built from attractors do more than recall—how can it become creative?
 
 SATTVA’s answer is to treat a concept not as a point, but as a *column* (or fiber) spanning multiple coupled subspaces. For example:
 
@@ -376,7 +376,7 @@ SATTVA’s answer is to treat a concept not as a point, but as a *column* (or fi
 - affective structure (valence/arousal signatures),
 - action structure (policies or tendencies).
 
-A “concept column” is a structured set of coupled states that can resonate together.
+A “concept column” is a structured set of coupled states that can resonate together morphologically across the entire domain, allowing association from among complex networks that are intertwined.
 
 ### 11.1 Resonant string metaphor
 
@@ -476,8 +476,8 @@ Goal: detect when internal dynamics are becoming unstable, brittle, or “spiral
 
 A first measurable version:
 
-- Train a predictor over settling trajectories (or next-step internal states) and compute an anomaly score from prediction error, following the HTM framing. [web:769]
-- Convert the anomaly stream into a smoothed likelihood (or other false-positive control), so the regulator is not hair-trigger under noise. [web:769]
+- Train a predictor over settling trajectories (or next-step internal states) and compute an anomaly score from prediction error, following the HTM framing.
+- Convert the anomaly stream into a smoothed likelihood (or other false-positive control), so the regulator is not hair-trigger under noise.
 - Interpret anomaly using task context:
   - In creative mode, treat elevated anomaly as permission to explore (within coherence constraints).
   - In safety mode, treat elevated anomaly as a trigger to constrain dynamics.
@@ -540,4 +540,4 @@ This is falsifiable at small scale:
 
 SATTVA proposes that “understanding” can be engineered as the geometry of stable semantic attractors and controlled transitions between them. It uses resonance and brain-field analogies as conceptual constraints, vision as a model of structural settling and structure–function coupling, bioelectric pattern memory as a motivating bridge, chemistry as a metaphor for modulatory gating above deep attractors, and trauma as a cautionary metaphor for maladaptive basin shaping.
 
-The immediate next step is to implement the first task-driven training objective and instrumentation so the project evolves from a dynamical demo into a learnable semantic structure.
+The immediate next step is to continue evolving the first task-driven training objective and instrumentation so the project evolves from a dynamical demo into a learnable semantic structure. This can be explored in the Experiments directory.
