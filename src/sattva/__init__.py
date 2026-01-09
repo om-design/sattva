@@ -9,6 +9,7 @@ A geometric field theory approach to AI cognition where:
 from .long_range_substrate import LongRangeSubstrate
 from .geometric_pattern import GeometricPattern, create_geometric_shape
 from .dynamics import SATTVADynamics
+from .two_timescale_dynamics import TwoTimescaleDynamics, bootstrap_validated_primitives
 from .semantic_space import SemanticSpace
 from .attractor_core import HopfieldCore
 
@@ -17,6 +18,8 @@ __all__ = [
     'GeometricPattern',
     'create_geometric_shape',
     'SATTVADynamics',
+    'TwoTimescaleDynamics',
+    'bootstrap_validated_primitives',
     'SemanticSpace',
     'HopfieldCore'
 ]
