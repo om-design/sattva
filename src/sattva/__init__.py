@@ -10,6 +10,7 @@ from .long_range_substrate import LongRangeSubstrate
 from .geometric_pattern import GeometricPattern, create_geometric_shape
 from .dynamics import SATTVADynamics
 from .two_timescale_dynamics import TwoTimescaleDynamics, bootstrap_validated_primitives
+from .gated_coupling_dynamics import GatedCouplingDynamics, bootstrap_gated_primitives, PrimitivePattern
 from .semantic_space import SemanticSpace
 from .attractor_core import HopfieldCore
 
@@ -20,6 +21,9 @@ __all__ = [
     'SATTVADynamics',
     'TwoTimescaleDynamics',
     'bootstrap_validated_primitives',
+    'GatedCouplingDynamics',
+    'bootstrap_gated_primitives',
+    'PrimitivePattern',
     'SemanticSpace',
     'HopfieldCore'
 ]
