@@ -210,7 +210,95 @@ This requires thinking in terms of wave mechanics, field theory, holographic pri
 
 ---
 
-## 12) Open questions (where the interesting work is)
+## 12) Two-timescale regulation (January 2026 - Critical insight)
+
+**User hypothesis on biological stability mechanism:**
+
+Human brains prevent runaway resonance through two-timescale separation:
+
+**Physical layer (slow):**
+- Synaptic changes require repetition - minutes to days
+- Acts as "speed limit" during pattern formation
+- Metabolic constraints (ATP, neurotransmitters) limit rate
+- Only patterns that survive repeated confirmation become stable
+
+**Conceptual layer (fast):**
+- Resonance between already-validated patterns can be fast (milliseconds)
+- This is SAFE because patterns have been vetted
+- Fast association permitted because operating over stable primitives
+- "Valid" = survived sensory confirmation and prediction testing
+
+**Why this prevents runaway:**
+
+1. Initial formation is rate-limited by biology
+2. Fast resonance over stable substrate can't create new unstable patterns
+3. Separation of timescales breaks positive feedback loops
+
+**Implementation implications:**
+- Need two update rates: fast (activation/resonance) and slow (formation/learning)
+- During development: only slow updates (forming primitives)
+- During mature operation: fast updates over pre-validated patterns
+- Anomaly regulation as backup when timescales insufficient
+
+**Why our test exploded:**
+- Everything on one timescale (fast)
+- Pattern formation and resonance at same rate
+- No validated primitive substrate
+- Result: positive feedback at all scales
+
+**Solution:**
+1. Bootstrap with validated primitives first
+2. Separate formation (slow, rare) from resonance (fast, continuous)
+3. Timescale-dependent coupling strength
+
+This explains:
+- Why infants learn slowly (forming primitives, rate-limited)
+- Why adult thinking is fast (resonating over stable patterns)
+- Why trauma during development is persistent (written as primitive during slow formation)
+- Why BDH's local passing works (implicitly slow, no explosions)
+- Why SATTVA's long-range requires regulation (fast + long-range = unstable without substrate)
+
+See: theory/two_timescale_regulation.md for full treatment.
+
+---
+
+## 13) Two-timescale regulation insight (January 8, 2026)
+
+**Critical discovery about biological stability:**
+
+Human brains prevent runaway resonance through two-timescale separation:
+
+**Physical layer (slow - hours/days):**
+- Synaptic changes require repetition
+- Acts as "speed limit" during pattern formation
+- Metabolic constraints limit rate
+- Only validated patterns become stable
+
+**Conceptual layer (fast - milliseconds):**
+- Resonance between already-validated patterns
+- Safe because patterns have been vetted through slow formation
+- Fast association permitted over stable primitive substrate
+
+**Why this prevents runaway:**
+1. Formation is rate-limited (can't create explosive feedback during learning)
+2. Fast resonance over stable substrate is safe (validated patterns unlikely catastrophic)
+3. Timescale separation breaks positive feedback loops
+
+**Implementation:**
+- Two update rates: fast (activation) vs slow (formation)
+- Development phase: only slow updates (forming primitives)
+- Mature phase: fast updates over pre-validated patterns
+- Anomaly regulation as backup
+
+**Why our test exploded:** Everything on one timescale, no validated substrate.
+
+**Solution:** Bootstrap with primitives first, separate formation from resonance.
+
+Full treatment in: `theory/two_timescale_regulation.md`
+
+---
+
+## 14) Open questions (where the interesting work is)
 
 These are the unresolved design questions implied by the conversation:
 

@@ -624,9 +624,67 @@ Two activation patterns \(P_1 = \{u_i^{(1)}\}\) and \(P_2 = \{u_i^{(2)}\}\) have
 - Graph structure of co-activated units
 - Correlation of field distributions
 
-### 5.8 Developmental hierarchy: From sensory primitives to compositional meaning
+### 5.8 Two-timescale regulation: Physical vs. conceptual dynamics
 
-A critical architectural constraint from observing human development: **geometric primitives must stabilize before compositional meaning emerges.**
+**A critical insight about biological stability:** Human brains regulate runaway resonance through a two-timescale mechanism that separates slow pattern formation from fast pattern association.
+
+**Physical layer (slow timescale):**
+- Synaptic changes require repetition and time (Hebbian learning, LTP/LTD)
+- New connections form slowly - minutes to hours to days
+- This acts as a "speed limit" preventing runaway excitation during pattern formation
+- Metabolic constraints (ATP, neurotransmitter availability) further limit rate
+- Critical period: when primitives are being formed, everything is slow and cautious
+
+**Conceptual layer (fast timescale):**
+- Resonance between already-validated geometric patterns can be fast (milliseconds)
+- This is SAFE because patterns have already been vetted through slow formation
+- "Valid" patterns = those that survived repeated sensory confirmation and prediction success
+- Fast association is permitted because it's operating over a substrate of stable, reliable primitives
+
+**Why this prevents runaway:**
+
+1. **Initial formation is rate-limited:** When new patterns are forming (learning), synaptic plasticity is slow. You can't create explosive feedback loops because the substrate itself changes slowly.
+
+2. **Fast resonance over stable primitives:** Once primitives exist, fast geometric resonance is safe because:
+   - Primitives have been validated (they predict sensory input correctly)
+   - Combinations of valid primitives are unlikely to be catastrophically wrong
+   - The substrate (primitive patterns) isn't changing during fast association
+
+3. **Separation of timescales:** Fast dynamics (milliseconds) for pattern completion/association; slow dynamics (hours/days) for structural learning
+
+**Implication for SATTVA architecture:**
+
+We need to implement two separate update rates:
+
+```python
+# Fast dynamics (every step): pattern activation and resonance
+activation_dynamics(dt=0.01)  # 10ms timescale
+
+# Slow dynamics (every 100-1000 steps): pattern formation and learning  
+if step % 1000 == 0:
+    update_stored_patterns()  # hour-scale equivalent
+    strengthen_connections()
+```
+
+**During development (primitive formation):**
+- Run ONLY slow dynamics
+- Require many repetitions to form new patterns
+- No fast resonance until patterns are stable
+
+**During mature operation (association/creativity):**
+- Fast resonance operates over pre-validated primitives
+- Slow dynamics still active but in background
+- Safe to have explosive resonance because substrate is stable
+
+This explains why:
+- Infants learn slowly (forming primitives, rate-limited)
+- Adults think fast (resonating over stable patterns)
+- Trauma during development is persistent (written during slow-formation period)
+- Adult learning can be fast (combining existing primitives) or slow (forming genuinely new primitives)
+
+### 5.9 Developmental hierarchy: From sensory primitives to compositional meaning
+
+Building on the two-timescale mechanism: **geometric primitives must stabilize before compositional meaning emerges.**
 
 Human infants take considerable time from birth to create associations because they must first:
 
@@ -670,7 +728,7 @@ This developmental constraint explains why:
 **Connection to trauma encoding:**
 Trauma during early development (when primitive patterns are forming) creates deep attractors precisely because it gets encoded at the foundational geometric level, not just at the conceptual level. This explains the persistent, involuntary, and often "irrational" nature of trauma responses - they're wired into the geometric substrate before meaning-making structures existed.
 
-### 5.9 Implications for implementation
+### 5.10 Implications for implementation
 
 This geometric field perspective means SATTVA implementation must:
 
