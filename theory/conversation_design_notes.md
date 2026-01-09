@@ -169,7 +169,48 @@ A working roadmap was articulated and then embedded in the README. In fuller pro
 - **Phase 3 — Scaled semantics**: move from toy vectors to real embeddings and richer tasks.
 - **Phase 4 — Toward agency**: add action proposals, feedback, and an environment.
 
-## 11) Open questions (where the interesting work is)
+## 11) Critical insight: Geometric field theory (January 2026)
+
+A major architectural clarification emerged during discussion of the implementation approach:
+
+**SATTVA is not primarily a system of weighted connections between semantic vectors. It is a field-based system where information is encoded in the geometric configuration of activation patterns.**
+
+### The tangled substrate insight
+
+The brain's neural structure appears tangled because it contains many types of connections. The activation of one "memory" creates a geometric form out of that mess. Associated ideas/concepts are activated not by semantic similarity but by **geometric compatibility**—they form shapes that can constructively interfere.
+
+### Key architectural consequences:
+
+1. **Individual units don't "mean" anything**—meaning emerges from distributed activation patterns
+2. **Geometric shape similarity enables coupling** even when patterns are semantically distant
+3. **Long-range field effects** (inspired by Levin's bioelectric work) mean activation propagates further than local connectivity suggests
+4. **Critical mass dynamics**: early learning appears unproductive until pattern density enables constructive interference (phase transition)
+5. **Creativity = geometric resonance**: not randomness, but coupling of geometrically similar (semantically distant) patterns producing coherent novelty
+6. **Depth dimension needed**: primitive/deep patterns have long-range influence; surface patterns are more local and plastic
+7. **Trauma as forced deep encoding**: high-stress experiences pushed into primitive regions with their context, creating "sewer system" lateral connections
+
+### Mathematical framing
+
+Field dynamics where:
+- State: activation levels \(u_i(t)\) at positions \(\mathbf{r}_i\) with depth \(d_i\)
+- Field propagation: \(\phi(\mathbf{r}, t) = \sum_i u_i(t) \cdot K(\|\mathbf{r} - \mathbf{r}_i\|, d_i)\)
+- Dynamics: \(\frac{du_i}{dt} = -\frac{\partial V}{\partial u_i} + \alpha \phi(\mathbf{r}_i, t) + \eta_i(t)\)
+- Pattern matching: based on geometric shape/topology, not semantic vector distance
+
+### Implementation implications
+
+This is **fundamentally different** from standard neural networks:
+- Not assuming pre-organized semantic space
+- Geometric pattern similarity (topology, shape, moments) rather than vector cosine
+- Long-range coupling via field effects
+- Multi-column from day one (threads that assemble, not monolithic knowledge)
+- Explicit depth/strength modeling
+
+This requires thinking in terms of wave mechanics, field theory, holographic principles, and geometric computing rather than standard gradient descent on weight matrices.
+
+---
+
+## 12) Open questions (where the interesting work is)
 
 These are the unresolved design questions implied by the conversation:
 

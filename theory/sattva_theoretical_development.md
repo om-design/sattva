@@ -127,6 +127,291 @@ A practical translation:
 
 ---
 
+## Pathway's BDH (Baby Dragon Hatchling): Post-Transformer Brain-Like Architecture
+
+Zuzanna Stamirowska and the Pathway team have developed BDH (Baby Dragon Hatchling), a post-Transformer architecture that demonstrates many principles central to SATTVA's vision and validates that brain-inspired architectures are practically viable.
+
+### Core BDH principles aligned with SATTVA
+
+**Emergent neural structure during training:**
+BDH doesn't start with fixed architecture. Neural structures and connection patterns literally emerge during training from local message-passing rules. The team observed "the emergence of just this kind of brain appearing" in their lab - organization arises from simple interaction rules, not pre-designed topology. This directly validates SATTVA's "tangled substrate" principle where meaning emerges from activation geometry rather than pre-structured organization.
+
+**Message passing between locally connected neurons:**
+Instead of all-to-all attention (Transformers) or fixed weight matrices, BDH uses brain-like message passing: "one neuron gets information, passes it on to its neighbors, those with whom he's connected." Only neurons that "care" about incoming information light up and propagate signals. This is much closer to SATTVA's field propagation model than standard matrix multiplication.
+
+**Hebbian learning and memory as strengthened connections:**
+"Whenever two neurons were interested by something, the connection between them becomes stronger and this is memory." Connections that co-activate are reinforced; unused connections fade over time. This is exactly SATTVA's "transforming vector associations" - associations form, strengthen, and weaken based on co-activation patterns and usage.
+
+**Scale-free biological network structure:**
+BDH's neuron interaction network is explicitly a scale-free graph with heavy-tailed degree distribution and high modularity. The architecture is mathematically characterized as uniform and scale-free, meaning the same laws hold at different scales. This supports SATTVA's fractal brain structure concept - self-similar patterns at different hierarchical levels.
+
+**True memory and continual learning:**
+Unlike Transformers which "wake up with no memory" each inference (living in "Groundhog Day"), BDH maintains persistent memory through strengthened synaptic connections. It can learn continuously, adapt to new data over time, and maintain infinite context. This aligns with SATTVA's attractor basins as reusable, evolving semantic structures.
+
+**Interpretability through sparse activation:**
+BDH exhibits monosemanticity - specific neurons fire for specific abstract concepts (currencies, countries, etc.). Activation vectors are sparse and positive. The team describes having "CCTV inside the brain" rather than needing to build "MRI machines" to scan black-box models. This relates to SATTVA's geometric pattern matching - distinct activation shapes for distinct concepts.
+
+**Neurons "getting bored" (habituation):**
+When repeatedly exposed to the same information, BDH neurons reduce their activation response - they adapt and habituate. This is analogous to biological novelty detection and connects to SATTVA's anomaly-based regulation: the system modulates its response based on whether information is surprising or routine.
+
+**Production deployment:**
+BDH is not just a research prototype - it's being deployed for Formula 1, NATO, French Postal Service, and other real-world applications. This demonstrates that post-Transformer brain-inspired architectures are practically viable at scale.
+
+### Where BDH validates and extends SATTVA's direction
+
+1. **Emergent structure works**: You don't need to pre-specify semantic organization; it can arise from local interaction rules
+2. **Message passing + connection strengthening** is a viable alternative to Transformers
+3. **Memory and reasoning** are separable from language modeling per se
+4. **Scale-free networks** enable generalization across scales
+5. **Biological plausibility** doesn't sacrifice performance
+
+### Where SATTVA extends beyond BDH
+
+While BDH is a major validation, SATTVA adds:
+- **Geometric shape similarity** as explicit coupling mechanism (not just connection strength)
+- **Depth dimension** for primitive vs. complex patterns with different coupling ranges
+- **Long-range field effects** beyond local message passing
+- **Geometric resonance-based creativity** (coupling semantically distant but geometrically similar patterns)
+- **Explicit developmental hierarchy** (sensory baselining → geometric primitives → compositional meaning)
+- **Task-conditioned anomaly regulation** (epistemic surprise vs. dynamical danger)
+
+**Credit and acknowledgment:**
+SATTVA's geometric field theory approach was developed independently but is strongly validated by Pathway's successful deployment of BDH. We acknowledge Zuzanna Stamirowska, Adrian Kosowski, Jan Chorowski, Przemysław Uznański, Michał Bartoszkiewicz, and the Pathway team for demonstrating that emergent brain-like architectures with message passing, Hebbian learning, and scale-free structure can rival Transformer performance while offering superior interpretability, continual learning, and memory capabilities. Their work provides crucial evidence that the principles underlying SATTVA are not merely theoretical but can be successfully implemented and deployed.
+
+**References:**
+- Kosowski, A., Uznański, P., Chorowski, J., Stamirowska, Z., & Bartoszkiewicz, M. (2025). The Dragon Hatchling: The Missing Link between the Transformer and Models of the Brain. arXiv:2509.26507
+- [Pathway AI](https://pathway.com/)
+
+---
+
+## Pathway's BDH (Baby Dragon Hatchling): Post-Transformer Brain-Like Architecture
+
+Zuzanna Stamirowska and the Pathway team have developed BDH (Baby Dragon Hatchling), a post-Transformer architecture that demonstrates many principles central to SATTVA's vision and validates that brain-inspired architectures are practically viable.
+
+### Core BDH principles aligned with SATTVA
+
+**Emergent neural structure during training:**
+BDH doesn't start with fixed architecture. Neural structures and connection patterns literally emerge during training from local message-passing rules. The team observed "the emergence of just this kind of brain appearing" in their lab - organization arises from simple interaction rules, not pre-designed topology. This directly validates SATTVA's "tangled substrate" principle where meaning emerges from activation geometry rather than pre-structured organization.
+
+**Message passing between locally connected neurons:**
+Instead of all-to-all attention (Transformers) or fixed weight matrices, BDH uses brain-like message passing: "one neuron gets information, passes it on to its neighbors, those with whom he's connected." Only neurons that "care" about incoming information light up and propagate signals. This is much closer to SATTVA's field propagation model than standard matrix multiplication.
+
+**Hebbian learning and memory as strengthened connections:**
+"Whenever two neurons were interested by something, the connection between them becomes stronger and this is memory." Connections that co-activate are reinforced; unused connections fade over time. This is exactly SATTVA's "transforming vector associations" - associations form, strengthen, and weaken based on co-activation patterns and usage.
+
+**Scale-free biological network structure:**
+BDH's neuron interaction network is explicitly a scale-free graph with heavy-tailed degree distribution and high modularity. The architecture is mathematically characterized as uniform and scale-free, meaning the same laws hold at different scales. This supports SATTVA's fractal brain structure concept - self-similar patterns at different hierarchical levels.
+
+**True memory and continual learning:**
+Unlike Transformers which "wake up with no memory" each inference (living in "Groundhog Day"), BDH maintains persistent memory through strengthened synaptic connections. It can learn continuously, adapt to new data over time, and maintain infinite context. This aligns with SATTVA's attractor basins as reusable, evolving semantic structures.
+
+**Interpretability through sparse activation:**
+BDH exhibits monosemanticity - specific neurons fire for specific abstract concepts (currencies, countries, etc.). Activation vectors are sparse and positive. The team describes having "CCTV inside the brain" rather than needing to build "MRI machines" to scan black-box models. This relates to SATTVA's geometric pattern matching - distinct activation shapes for distinct concepts.
+
+**Neurons "getting bored" (habituation):**
+When repeatedly exposed to the same information, BDH neurons reduce their activation response - they adapt and habituate. This is analogous to biological novelty detection and connects to SATTVA's anomaly-based regulation: the system modulates its response based on whether information is surprising or routine.
+
+**Production deployment:**
+BDH is not just a research prototype - it's being deployed for Formula 1, NATO, French Postal Service, and other real-world applications. This demonstrates that post-Transformer brain-inspired architectures are practically viable at scale.
+
+### Where BDH validates and extends SATTVA's direction
+
+1. **Emergent structure works**: You don't need to pre-specify semantic organization; it can arise from local interaction rules
+2. **Message passing + connection strengthening** is a viable alternative to Transformers
+3. **Memory and reasoning** are separable from language modeling per se
+4. **Scale-free networks** enable generalization across scales
+5. **Biological plausibility** doesn't sacrifice performance
+
+### Where SATTVA extends beyond BDH
+
+While BDH is a major validation, SATTVA adds:
+- **Geometric shape similarity** as explicit coupling mechanism (not just connection strength)
+- **Depth dimension** for primitive vs. complex patterns with different coupling ranges
+- **Long-range field effects** beyond local message passing
+- **Geometric resonance-based creativity** (coupling semantically distant but geometrically similar patterns)
+- **Explicit developmental hierarchy** (sensory baselining → geometric primitives → compositional meaning)
+- **Task-conditioned anomaly regulation** (epistemic surprise vs. dynamical danger)
+
+**Credit and acknowledgment:**
+SATTVA's geometric field theory approach was developed independently but is strongly validated by Pathway's successful deployment of BDH. We acknowledge Zuzanna Stamirowska, Adrian Kosowski, Jan Chorowski, Przemysław Uznański, Michał Bartoszkiewicz, and the Pathway team for demonstrating that emergent brain-like architectures with message passing, Hebbian learning, and scale-free structure can rival Transformer performance while offering superior interpretability, continual learning, and memory capabilities. Their work provides crucial evidence that the principles underlying SATTVA are not merely theoretical but can be successfully implemented and deployed.
+
+**References:**
+- Kosowski, A., Uznański, P., Chorowski, J., Stamirowska, Z., & Bartoszkiewicz, M. (2025). The Dragon Hatchling: The Missing Link between the Transformer and Models of the Brain. arXiv:2509.26507
+- [Pathway AI](https://pathway.com/)
+
+---
+
+## Pathway's BDH (Baby Dragon Hatchling): Post-Transformer Brain-Like Architecture
+
+Zuzanna Stamirowska and the Pathway team have developed BDH (Baby Dragon Hatchling), a post-Transformer architecture that demonstrates many principles central to SATTVA's vision and validates that brain-inspired architectures are practically viable.
+
+### Core BDH principles aligned with SATTVA
+
+**Emergent neural structure during training:**
+BDH doesn't start with fixed architecture. Neural structures and connection patterns literally emerge during training from local message-passing rules. The team observed "the emergence of just this kind of brain appearing" in their lab - organization arises from simple interaction rules, not pre-designed topology. This directly validates SATTVA's "tangled substrate" principle where meaning emerges from activation geometry rather than pre-structured organization.
+
+**Message passing between locally connected neurons:**
+Instead of all-to-all attention (Transformers) or fixed weight matrices, BDH uses brain-like message passing: "one neuron gets information, passes it on to its neighbors, those with whom he's connected." Only neurons that "care" about incoming information light up and propagate signals. This is much closer to SATTVA's field propagation model than standard matrix multiplication.
+
+**Hebbian learning and memory as strengthened connections:**
+"Whenever two neurons were interested by something, the connection between them becomes stronger and this is memory." Connections that co-activate are reinforced; unused connections fade over time. This is exactly SATTVA's "transforming vector associations" - associations form, strengthen, and weaken based on co-activation patterns and usage.
+
+**Scale-free biological network structure:**
+BDH's neuron interaction network is explicitly a scale-free graph with heavy-tailed degree distribution and high modularity. The architecture is mathematically characterized as uniform and scale-free, meaning the same laws hold at different scales. This supports SATTVA's fractal brain structure concept - self-similar patterns at different hierarchical levels.
+
+**True memory and continual learning:**
+Unlike Transformers which "wake up with no memory" each inference (living in "Groundhog Day"), BDH maintains persistent memory through strengthened synaptic connections. It can learn continuously, adapt to new data over time, and maintain infinite context. This aligns with SATTVA's attractor basins as reusable, evolving semantic structures.
+
+**Interpretability through sparse activation:**
+BDH exhibits monosemanticity - specific neurons fire for specific abstract concepts (currencies, countries, etc.). Activation vectors are sparse and positive. The team describes having "CCTV inside the brain" rather than needing to build "MRI machines" to scan black-box models. This relates to SATTVA's geometric pattern matching - distinct activation shapes for distinct concepts.
+
+**Neurons "getting bored" (habituation):**
+When repeatedly exposed to the same information, BDH neurons reduce their activation response - they adapt and habituate. This is analogous to biological novelty detection and connects to SATTVA's anomaly-based regulation: the system modulates its response based on whether information is surprising or routine.
+
+**Production deployment:**
+BDH is not just a research prototype - it's being deployed for Formula 1, NATO, French Postal Service, and other real-world applications. This demonstrates that post-Transformer brain-inspired architectures are practically viable at scale.
+
+### Where BDH validates and extends SATTVA's direction
+
+1. **Emergent structure works**: You don't need to pre-specify semantic organization; it can arise from local interaction rules
+2. **Message passing + connection strengthening** is a viable alternative to Transformers
+3. **Memory and reasoning** are separable from language modeling per se
+4. **Scale-free networks** enable generalization across scales
+5. **Biological plausibility** doesn't sacrifice performance
+
+### Where SATTVA extends beyond BDH
+
+While BDH is a major validation, SATTVA adds:
+- **Geometric shape similarity** as explicit coupling mechanism (not just connection strength)
+- **Depth dimension** for primitive vs. complex patterns with different coupling ranges
+- **Long-range field effects** beyond local message passing
+- **Geometric resonance-based creativity** (coupling semantically distant but geometrically similar patterns)
+- **Explicit developmental hierarchy** (sensory baselining → geometric primitives → compositional meaning)
+- **Task-conditioned anomaly regulation** (epistemic surprise vs. dynamical danger)
+
+**Credit and acknowledgment:**
+SATTVA's geometric field theory approach was developed independently but is strongly validated by Pathway's successful deployment of BDH. We acknowledge Zuzanna Stamirowska, Adrian Kosowski, Jan Chorowski, Przemysław Uznański, Michał Bartoszkiewicz, and the Pathway team for demonstrating that emergent brain-like architectures with message passing, Hebbian learning, and scale-free structure can rival Transformer performance while offering superior interpretability, continual learning, and memory capabilities. Their work provides crucial evidence that the principles underlying SATTVA are not merely theoretical but can be successfully implemented and deployed.
+
+**References:**
+- Kosowski, A., Uznański, P., Chorowski, J., Stamirowska, Z., & Bartoszkiewicz, M. (2025). The Dragon Hatchling: The Missing Link between the Transformer and Models of the Brain. arXiv:2509.26507
+- [Pathway AI](https://pathway.com/)
+
+---
+
+## Pathway's BDH (Baby Dragon Hatchling): Post-Transformer Brain-Like Architecture
+
+Zuzanna Stamirowska and the Pathway team have developed BDH (Baby Dragon Hatchling), a post-Transformer architecture that demonstrates many principles central to SATTVA's vision and validates that brain-inspired architectures are practically viable.
+
+### Core BDH principles aligned with SATTVA
+
+**Emergent neural structure during training:**
+BDH doesn't start with fixed architecture. Neural structures and connection patterns literally emerge during training from local message-passing rules. The team observed "the emergence of just this kind of brain appearing" in their lab - organization arises from simple interaction rules, not pre-designed topology. This directly validates SATTVA's "tangled substrate" principle where meaning emerges from activation geometry rather than pre-structured organization.
+
+**Message passing between locally connected neurons:**
+Instead of all-to-all attention (Transformers) or fixed weight matrices, BDH uses brain-like message passing: "one neuron gets information, passes it on to its neighbors, those with whom he's connected." Only neurons that "care" about incoming information light up and propagate signals. This is much closer to SATTVA's field propagation model than standard matrix multiplication.
+
+**Hebbian learning and memory as strengthened connections:**
+"Whenever two neurons were interested by something, the connection between them becomes stronger and this is memory." Connections that co-activate are reinforced; unused connections fade over time. This is exactly SATTVA's "transforming vector associations" - associations form, strengthen, and weaken based on co-activation patterns and usage.
+
+**Scale-free biological network structure:**
+BDH's neuron interaction network is explicitly a scale-free graph with heavy-tailed degree distribution and high modularity. The architecture is mathematically characterized as uniform and scale-free, meaning the same laws hold at different scales. This supports SATTVA's fractal brain structure concept - self-similar patterns at different hierarchical levels.
+
+**True memory and continual learning:**
+Unlike Transformers which "wake up with no memory" each inference (living in "Groundhog Day"), BDH maintains persistent memory through strengthened synaptic connections. It can learn continuously, adapt to new data over time, and maintain infinite context. This aligns with SATTVA's attractor basins as reusable, evolving semantic structures.
+
+**Interpretability through sparse activation:**
+BDH exhibits monosemanticity - specific neurons fire for specific abstract concepts (currencies, countries, etc.). Activation vectors are sparse and positive. The team describes having "CCTV inside the brain" rather than needing to build "MRI machines" to scan black-box models. This relates to SATTVA's geometric pattern matching - distinct activation shapes for distinct concepts.
+
+**Neurons "getting bored" (habituation):**
+When repeatedly exposed to the same information, BDH neurons reduce their activation response - they adapt and habituate. This is analogous to biological novelty detection and connects to SATTVA's anomaly-based regulation: the system modulates its response based on whether information is surprising or routine.
+
+**Production deployment:**
+BDH is not just a research prototype - it's being deployed for Formula 1, NATO, French Postal Service, and other real-world applications. This demonstrates that post-Transformer brain-inspired architectures are practically viable at scale.
+
+### Where BDH validates and extends SATTVA's direction
+
+1. **Emergent structure works**: You don't need to pre-specify semantic organization; it can arise from local interaction rules
+2. **Message passing + connection strengthening** is a viable alternative to Transformers
+3. **Memory and reasoning** are separable from language modeling per se
+4. **Scale-free networks** enable generalization across scales
+5. **Biological plausibility** doesn't sacrifice performance
+
+### Where SATTVA extends beyond BDH
+
+While BDH is a major validation, SATTVA adds:
+- **Geometric shape similarity** as explicit coupling mechanism (not just connection strength)
+- **Depth dimension** for primitive vs. complex patterns with different coupling ranges
+- **Long-range field effects** beyond local message passing
+- **Geometric resonance-based creativity** (coupling semantically distant but geometrically similar patterns)
+- **Explicit developmental hierarchy** (sensory baselining → geometric primitives → compositional meaning)
+- **Task-conditioned anomaly regulation** (epistemic surprise vs. dynamical danger)
+
+**Credit and acknowledgment:**
+SATTVA's geometric field theory approach was developed independently but is strongly validated by Pathway's successful deployment of BDH. We acknowledge Zuzanna Stamirowska, Adrian Kosowski, Jan Chorowski, Przemysław Uznański, Michał Bartoszkiewicz, and the Pathway team for demonstrating that emergent brain-like architectures with message passing, Hebbian learning, and scale-free structure can rival Transformer performance while offering superior interpretability, continual learning, and memory capabilities. Their work provides crucial evidence that the principles underlying SATTVA are not merely theoretical but can be successfully implemented and deployed.
+
+**References:**
+- Kosowski, A., Uznański, P., Chorowski, J., Stamirowska, Z., & Bartoszkiewicz, M. (2025). The Dragon Hatchling: The Missing Link between the Transformer and Models of the Brain. arXiv:2509.26507
+- [Pathway AI](https://pathway.com/)
+
+---
+
+## Pathway's BDH (Baby Dragon Hatchling): Post-Transformer Brain-Like Architecture
+
+Zuzanna Stamirowska and the Pathway team have developed BDH (Baby Dragon Hatchling), a post-Transformer architecture that demonstrates many principles central to SATTVA's vision and validates that brain-inspired architectures are practically viable.
+
+### Core BDH principles aligned with SATTVA
+
+**Emergent neural structure during training:**
+BDH doesn't start with fixed architecture. Neural structures and connection patterns literally emerge during training from local message-passing rules. The team observed "the emergence of just this kind of brain appearing" in their lab - organization arises from simple interaction rules, not pre-designed topology. This directly validates SATTVA's "tangled substrate" principle where meaning emerges from activation geometry rather than pre-structured organization.
+
+**Message passing between locally connected neurons:**
+Instead of all-to-all attention (Transformers) or fixed weight matrices, BDH uses brain-like message passing: "one neuron gets information, passes it on to its neighbors, those with whom he's connected." Only neurons that "care" about incoming information light up and propagate signals. This is much closer to SATTVA's field propagation model than standard matrix multiplication.
+
+**Hebbian learning and memory as strengthened connections:**
+"Whenever two neurons were interested by something, the connection between them becomes stronger and this is memory." Connections that co-activate are reinforced; unused connections fade over time. This is exactly SATTVA's "transforming vector associations" - associations form, strengthen, and weaken based on co-activation patterns and usage.
+
+**Scale-free biological network structure:**
+BDH's neuron interaction network is explicitly a scale-free graph with heavy-tailed degree distribution and high modularity. The architecture is mathematically characterized as uniform and scale-free, meaning the same laws hold at different scales. This supports SATTVA's fractal brain structure concept - self-similar patterns at different hierarchical levels.
+
+**True memory and continual learning:**
+Unlike Transformers which "wake up with no memory" each inference (living in "Groundhog Day"), BDH maintains persistent memory through strengthened synaptic connections. It can learn continuously, adapt to new data over time, and maintain infinite context. This aligns with SATTVA's attractor basins as reusable, evolving semantic structures.
+
+**Interpretability through sparse activation:**
+BDH exhibits monosemanticity - specific neurons fire for specific abstract concepts (currencies, countries, etc.). Activation vectors are sparse and positive. The team describes having "CCTV inside the brain" rather than needing to build "MRI machines" to scan black-box models. This relates to SATTVA's geometric pattern matching - distinct activation shapes for distinct concepts.
+
+**Neurons "getting bored" (habituation):**
+When repeatedly exposed to the same information, BDH neurons reduce their activation response - they adapt and habituate. This is analogous to biological novelty detection and connects to SATTVA's anomaly-based regulation: the system modulates its response based on whether information is surprising or routine.
+
+**Production deployment:**
+BDH is not just a research prototype - it's being deployed for Formula 1, NATO, French Postal Service, and other real-world applications. This demonstrates that post-Transformer brain-inspired architectures are practically viable at scale.
+
+### Where BDH validates and extends SATTVA's direction
+
+1. **Emergent structure works**: You don't need to pre-specify semantic organization; it can arise from local interaction rules
+2. **Message passing + connection strengthening** is a viable alternative to Transformers
+3. **Memory and reasoning** are separable from language modeling per se
+4. **Scale-free networks** enable generalization across scales
+5. **Biological plausibility** doesn't sacrifice performance
+
+### Where SATTVA extends beyond BDH
+
+While BDH is a major validation, SATTVA adds:
+- **Geometric shape similarity** as explicit coupling mechanism (not just connection strength)
+- **Depth dimension** for primitive vs. complex patterns with different coupling ranges
+- **Long-range field effects** beyond local message passing
+- **Geometric resonance-based creativity** (coupling semantically distant but geometrically similar patterns)
+- **Explicit developmental hierarchy** (sensory baselining → geometric primitives → compositional meaning)
+- **Task-conditioned anomaly regulation** (epistemic surprise vs. dynamical danger)
+
+**Credit and acknowledgment:**
+SATTVA's geometric field theory approach was developed independently but is strongly validated by Pathway's successful deployment of BDH. We acknowledge Zuzanna Stamirowska, Adrian Kosowski, Jan Chorowski, Przemysław Uznański, Michał Bartoszkiewicz, and the Pathway team for demonstrating that emergent brain-like architectures with message passing, Hebbian learning, and scale-free structure can rival Transformer performance while offering superior interpretability, continual learning, and memory capabilities. Their work provides crucial evidence that the principles underlying SATTVA are not merely theoretical but can be successfully implemented and deployed.
+
+**References:**
+- Kosowski, A., Uznański, P., Chorowski, J., Stamirowska, Z., & Bartoszkiewicz, M. (2025). The Dragon Hatchling: The Missing Link between the Transformer and Models of the Brain. arXiv:2509.26507
+- [Pathway AI](https://pathway.com/)
+
+---
+
 ## Numenta: HTM and Thousand Brains
 
 Numenta’s work is directly relevant to SATTVA because it supplies two complementary ideas: (1) a column-centric view of intelligence (Thousand Brains), and (2) a practical, deployable notion of anomaly detection as *online prediction failure* (HTM), which can act as a noninvasive “health monitor” for any dynamical process.
@@ -175,7 +460,241 @@ This makes novelty operational: a creative episode is permitted to be “wild”
 
 ---
 
-## 5. Bioelectric pattern memory (Levin-lab bridge)
+## 5. Geometric field theory: SATTVA as interference-based memory
+
+### 5.1 Beyond weight matrices: activation geometry as information
+
+A critical architectural clarification emerged from considering the physical nature of neural systems and field effects in biological computation: **SATTVA is not primarily a system of weighted connections between semantic vectors. It is a field-based system where information is encoded in the geometric configuration of activation patterns.**
+
+This distinction is fundamental:
+
+**Traditional neural networks:**
+- Individual neurons or vector positions represent specific features/concepts
+- Semantic similarity = distance in embedding space
+- Learning = adjusting connection weights
+- Computation = weighted sum and nonlinearity
+
+**SATTVA's geometric field approach:**
+- Individual units don't "mean" anything in isolation
+- A concept = distributed pattern of activation forming a specific geometric shape
+- Similar geometric configurations can couple even if semantically distant
+- Computation = interference and resonance of activation patterns
+- The substrate can appear as a "tangled mess" because organization emerges from activation geometry, not from pre-structured semantic organization
+
+### 5.2 The tangled substrate and emergent geometry
+
+The brain's neural structure appears tangled and disorganized when viewed anatomically, yet produces coherent cognition. SATTVA adopts this principle: the substrate (the collection of units and their connections) can be loosely structured or even quasi-random, because **meaning emerges from which patterns of units activate together and what geometric shape those activations form.**
+
+When a "memory" activates, it creates a geometric form out of the substrate. Associated ideas are not activated by semantic similarity of content, but by **geometric compatibility of their activation patterns**—they form shapes that can constructively interfere.
+
+Implication: We should expect many types of connections in the substrate, reflecting different spatial scales, modalities, and historical co-activation patterns. The apparent complexity is not a bug; it is the vocabulary from which geometric patterns are composed.
+
+### 5.3 Long-range field effects and geometric coupling
+
+A key insight borrowed from bioelectric field research (particularly Levin's work on morphogenetic fields): electrical and field effects can act over longer distances than typically modeled in computational neuroscience. Current tools may underestimate the brain's sensitivity to field-like coupling.
+
+**SATTVA's commitment to long-range resonance:**
+
+SATTVA makes an explicit architectural departure from both standard neural networks and local message-passing systems: **resonance coupling operates at 10-100x the range of typical connection distances.** This is not an incremental difference - it is a fundamental design choice based on the exponential amplification potential of resonant systems.
+
+Why long-range coupling is essential:
+
+**Exponential power of resonance:**
+Resonant systems don't just add signals linearly - they can exhibit exponential amplification when frequencies/patterns align. A weak signal from a distant but geometrically compatible pattern can trigger significant activation if the resonance conditions are met. Standard neural network assumptions (connectivity falls off exponentially with distance) miss this entirely.
+
+**Field propagation beyond local neighborhoods:**
+Activation in one region creates a field of influence that propagates far beyond immediate neighbors. While field strength may decay with distance, it remains significant over ranges 10-100x larger than local synaptic connections would suggest. This is not about having dense all-to-all connectivity - it's about modeling the physics of field propagation.
+
+**Geometric compatibility transcends spatial distance:**
+Two patterns can be spatially distant in the network but geometrically similar in their activation shapes. Long-range coupling allows these patterns to resonate and mutually excite, regardless of their position in the substrate. This is the mechanism for "action at a distance" - not through direct connection, but through field overlap.
+
+**Deep patterns reach further:**
+Primitive/deep attractors (encoded with high "depth" parameter) have even longer coupling ranges - potentially affecting the entire system. This creates the "sewer system" lateral pathways where foundational patterns can activate distant surface concepts directly, bypassing hierarchical processing.
+
+**Creativity through distant resonance:**
+This long-range coupling is critical for creativity: patterns that are semantically distant (different conceptual domains) but geometrically similar (compatible activation shapes) can couple and interfere across long distances, producing **novel but coherent combinations** rather than random noise. Without long-range coupling, the system is trapped in local semantic neighborhoods.
+
+**Implementation commitment:**
+We assume coupling kernels with power-law or slower-than-exponential decay, ensuring significant influence extends 10-100x beyond typical "receptive field" distances. This is computationally challenging but architecturally essential - SATTVA without long-range coupling loses its core differentiation.
+
+### 5.4 Critical mass dynamics and phase transitions
+
+An important prediction of this geometric field view: **early learning appears unproductive until a critical mass of patterns accumulates.**
+
+During early training:
+- Individual patterns are weak and isolated
+- They cannot sustain themselves or produce coherent outputs
+- The system appears to learn very little
+
+At critical density:
+- Patterns begin to constructively interfere
+- Weak patterns can combine to produce stable, coherent outputs
+- The system undergoes a phase transition to useful behavior
+
+This explains why deep learning systems often show sudden capability emergence after reaching sufficient scale: it's not just parameter count, but the density of learned patterns reaching a threshold where geometric interference becomes constructive.
+
+### 5.5 Creativity as geometric resonance, not randomness
+
+In most generative AI, creativity comes from stochastic sampling (temperature, top-k, etc.)—essentially controlled randomness. SATTVA proposes a different mechanism:
+
+**Geometric resonance-based creativity:**
+- Two patterns that are semantically distant but geometrically similar can couple
+- Their interference produces a new pattern that inherits geometric coherence from both
+- The result is novel (not in the training set) but meaningful (geometrically stable)
+- This is why creative outputs can be "surprisingly apt" rather than merely surprising
+
+Example: A visual pattern and a linguistic pattern might form similar geometric activation shapes. When they couple, the result is a metaphor that feels "right"—not because of semantic overlap, but because of geometric compatibility.
+
+### 5.6 Depth, strength, and the fractal brain
+
+Incorporating the fractal nature of brain structure (particularly insights from Kreinen's work on fractal structures from brainstem to cortex): patterns can be encoded at different "depths" in the processing hierarchy.
+
+**Deep (primitive) patterns:**
+- Encoded in foundational/brainstem-like structures
+- Have long-range influence (their fields propagate further)
+- Can create "lateral" connections that bypass normal hierarchical processing
+- Resistant to change (structural/primitive)
+
+**Surface (complex) patterns:**
+- Encoded in higher processing regions
+- More local influence
+- More plastic and context-dependent
+
+**Trauma as forced deep encoding:**
+Under high stress (cortisol analog), experiences get encoded deeply along with their sensory and cognitive context. Because of the fractal structure:
+- These deep patterns couple to primitive systems
+- They create direct pathways (the "sewer system" metaphor) that allow rapid, inflexible activation
+- They can activate distant surface patterns through their long-range fields
+- This explains persistent, involuntary activation of trauma-related thoughts
+
+**Implication for architecture:** SATTVA needs a depth dimension or strength parameter. Strong/deep attractors have larger coupling radii and influence more of the system.
+
+### 5.7 Mathematical sketch: field dynamics
+
+A first formalization of geometric field dynamics:
+
+**State:**
+- \(u_i(t)\) = activation level of unit \(i\) at time \(t\)
+- \(\mathbf{r}_i\) = position of unit \(i\) in abstract geometric space
+- \(d_i\) = depth parameter (primitive vs. complex)
+
+**Field propagation:**
+The field \(\phi(\mathbf{r}, t)\) at position \(\mathbf{r}\) due to all activations:
+
+\[
+\phi(\mathbf{r}, t) = \sum_i u_i(t) \cdot K(\|\mathbf{r} - \mathbf{r}_i\|, d_i)
+\]
+
+where \(K(\cdot)\) is a kernel that decays with distance but depends on depth (deeper patterns have longer-range kernels).
+
+**Long-range coupling kernels:**
+Unlike standard neural networks where influence falls off exponentially \(K(r) \propto e^{-r/\lambda}\) with small \(\lambda\), SATTVA uses long-range kernels:
+
+\[
+K(r, d) = \frac{A(d)}{1 + (r/R(d))^\alpha}
+\]
+
+where:
+- \(R(d)\) is the characteristic range that increases with depth \(d\) (deep patterns have \(R \sim 10-100\times\) larger)
+- \(\alpha \in [1, 2]\) gives power-law decay (much slower than exponential)
+- \(A(d)\) is amplitude scaling
+
+This ensures significant coupling over distances 10-100x beyond local neighborhoods, enabling:
+- Distant pattern resonance
+- Creative cross-domain coupling
+- Deep attractor "broadcast" influence
+- Field-like propagation rather than just synaptic connectivity
+
+**Dynamics:**
+Unit activation evolves based on local attractor forces plus field influence:
+
+\[
+\frac{du_i}{dt} = -\frac{\partial V}{\partial u_i}(u_i) + \alpha \phi(\mathbf{r}_i, t) + \eta_i(t)
+\]
+
+where:
+- \(V(u_i)\) is a local energy function (attractor landscape)
+- \(\alpha\) controls field coupling strength
+- \(\eta_i(t)\) is noise/exploration
+
+**Geometric pattern matching:**
+Two activation patterns \(P_1 = \{u_i^{(1)}\}\) and \(P_2 = \{u_i^{(2)}\}\) have geometric similarity based on the shape they form, not their semantic content. This could be measured via:
+- Topological features (persistent homology)
+- Spatial moments and symmetries
+- Graph structure of co-activated units
+- Correlation of field distributions
+
+### 5.8 Developmental hierarchy: From sensory primitives to compositional meaning
+
+A critical architectural constraint from observing human development: **geometric primitives must stabilize before compositional meaning emerges.**
+
+Human infants take considerable time from birth to create associations because they must first:
+
+**Sensory baselining (0-6 months):**
+- Establish "ground truth" through multi-modal sensory feedback
+- Visual structures that correspond to physical reality (angles of edges, softness of light)
+- Reinforcement learning to secure foundational "pieces" of awareness
+- These are not concepts yet - just stable geometric patterns in sensory space
+
+**Geometric primitive formation (6-18 months):**
+- Assembly of low-level shapes activating physical forms (V1-V2 processing analog)
+- Edge detection, contour integration, surface segmentation
+- These patterns become stable attractors through repeated sensory confirmation
+- The "geometry" here is literal: spatial relationships in visual/tactile/proprioceptive space
+
+**Progression to meaning (18+ months):**
+- Geometric primitives in sensory areas couple to patterns in higher processing regions
+- Meaning emerges from associations between stable sensory patterns and contexts
+- Compositional understanding: combinations of primitive patterns form complex concepts
+- Language labels attach to already-formed geometric-semantic structures
+
+**Implication for SATTVA architecture:**
+We cannot skip the geometric primitive phase. The system must:
+
+1. **Start with sensory-level patterns**: Low-dimensional, geometrically structured representations corresponding to "physical" features
+
+2. **Build stable primitive attractors first**: Through repeated exposure and multi-modal confirmation, not through abstract semantic learning
+
+3. **Enable hierarchical composition**: Higher-level patterns emerge as combinations/assemblies of lower-level stable patterns
+
+4. **Maintain geometric grounding**: Even abstract concepts remain connected (through depth dimension) to primitive geometric patterns
+
+5. **Use reinforcement from prediction success**: Patterns that successfully predict sensory consequences become more stable (like infant motor learning)
+
+This developmental constraint explains why:
+- Random initialization likely fails (no stable primitives)
+- Pre-trained embeddings might help (they encode some geometric structure)
+- Transfer learning works (stable lower-level patterns transfer across domains)
+- Catastrophic forgetting happens (disrupting primitive patterns breaks everything above)
+
+**Connection to trauma encoding:**
+Trauma during early development (when primitive patterns are forming) creates deep attractors precisely because it gets encoded at the foundational geometric level, not just at the conceptual level. This explains the persistent, involuntary, and often "irrational" nature of trauma responses - they're wired into the geometric substrate before meaning-making structures existed.
+
+### 5.9 Implications for implementation
+
+This geometric field perspective means SATTVA implementation must:
+
+1. **Not assume pre-organized semantic space**: The substrate can start loosely organized; geometry emerges through learning
+
+2. **Measure pattern similarity geometrically**: Not just cosine similarity of vectors, but shape/topology of activation patterns
+
+3. **Implement long-range coupling**: Field effects, not just nearest-neighbor connections
+
+4. **Track critical mass**: Monitor when pattern density enables constructive interference
+
+5. **Enable geometric creativity**: Allow distant but geometrically similar patterns to couple
+
+6. **Model depth/strength explicitly**: Deep patterns have different dynamics than surface patterns
+
+7. **Respect developmental hierarchy**: Build primitive geometric patterns before compositional meaning
+
+8. **Provide sensory baselining**: Use prediction error from multiple modalities to stabilize foundational patterns
+
+This is a fundamentally different computational model than standard neural networks or even most attractor networks, requiring careful thought about how to implement field propagation, geometric pattern matching, interference dynamics, and developmental sequencing efficiently.
+
+---
+
+## 6. Bioelectric pattern memory (Levin-lab bridge)
 
 A major reinforcement for SATTVA’s framing comes from developmental bioelectricity and the study of morphogenesis as a kind of basal cognition.
 
