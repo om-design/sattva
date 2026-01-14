@@ -2,7 +2,7 @@
 
 SATTVA is a new type of AI engine. This research project explores how to build an **Attractor-based Understanding Machine (AUM)**: a system whose core representations are stable, semantic attractors in a dynamical state space rather than just token sequences. Most existing AI models gather a huge amount of statistics from training materials and guess the next most likely word.
 
-The working hypothesis: if semantic vectors are trained so that their associations form stable attractors, then meaning, memory, and (eventually) agency can emerge from the geometry and dynamics of those attractors.
+The working hypothesis: if semantic vectors are trained so that their associations form stable attractors, then meaning, memory, and (eventually) agency can emerge from the geometry and dynamics of those attractors. In practical terms, this means that the form of connected concepts creates a geometry of neurons. When similar geometries are present, they resonate and form association. The more resonance locally, the farther it reaches. This allows two main advantages that are new. First, is that out of many, many connections many concepts can occupy the same space with patterns emerging as needed. Second, distant resonance can give rise to true creativity and perhaps imagination.
 
 ## What SATTVA means
 
