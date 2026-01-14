@@ -1,29 +1,21 @@
-"""SATTVA: Semantic Attractor Training of Transforming Vector Associations.
+"""SATTVA: GA-first core.
 
-A geometric field theory approach to AI cognition where:
-- Information is encoded in geometric activation patterns
-- Long-range coupling (10-100x) enables distant resonance
-- Creativity emerges from geometric compatibility, not randomness
+Patterns are GA multivectors over units; intuition is GA resonance.
+Legacy modules have been archived under 'old'.
 """
 
-from .long_range_substrate import LongRangeSubstrate
-from .geometric_pattern import GeometricPattern, create_geometric_shape
-from .dynamics import SATTVADynamics
-from .two_timescale_dynamics import TwoTimescaleDynamics, bootstrap_validated_primitives
-from .gated_coupling_dynamics import GatedCouplingDynamics, bootstrap_gated_primitives, PrimitivePattern
-from .semantic_space import SemanticSpace
-from .attractor_core import HopfieldCore
+from .ga_sattva_core import (
+    GAUnitSet,
+    GAPattern,
+    GASATTVADynamics,
+    create_ga_primitive,
+    pattern_from_units,
+)
 
 __all__ = [
-    'LongRangeSubstrate',
-    'GeometricPattern',
-    'create_geometric_shape',
-    'SATTVADynamics',
-    'TwoTimescaleDynamics',
-    'bootstrap_validated_primitives',
-    'GatedCouplingDynamics',
-    'bootstrap_gated_primitives',
-    'PrimitivePattern',
-    'SemanticSpace',
-    'HopfieldCore'
+    "GAUnitSet",
+    "GAPattern",
+    "GASATTVADynamics",
+    "create_ga_primitive",
+    "pattern_from_units",
 ]

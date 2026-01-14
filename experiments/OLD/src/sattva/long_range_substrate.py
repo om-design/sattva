@@ -168,33 +168,47 @@ class LongRangeSubstrate:
             self.connection_usage = self.connection_usage.tolil()
         
         # Accrete conductance on co-active connections
-        alpha_accrete = 0.002  # VERY slow (biological timescale)
+        alpha_accrete = 0.0002  # EXTREMELY slow (geological timescale)
         
         for i in active_indices:
             for j in active_indices:
                 if i != j and self.connections[i, j] != 0:
                     # Co-activation signal
-                    co_signal = self.activations[i] * self.activations[j]
+                    co_signal = float(self.activations[i] * self.activations[j])
                     
                     # Accrete toward maximum (gradual buildup)
-                    current = self.conductance[i, j]
-                    target = self.MAX_ACCRETION * np.tanh(100 * co_signal)
-                    self.conductance[i, j] = current + dt * alpha_accrete * (target - current)
+                    current = float(self.conductance[i, j])
+                    target = float(self.MAX_ACCRETION * np.tanh(100.0 * co_signal))
+                    new_val = current + dt * alpha_accrete * (target - current)
+                    self.conductance[i, j] = float(new_val)
                     
                     # Track usage (exponential moving average)
                     alpha_usage = 0.001
                     current_usage = float(self.connection_usage[i, j])
-                    self.connection_usage[i, j] = (
-                        (1 - alpha_usage) * current_usage + alpha_usage * co_signal
+                    self.connection_usage[i, j] = float(
+                        (1.0 - alpha_usage) * current_usage + alpha_usage * co_signal
                     )
         
         # Very slow passive decay (natural degradation)
         # Active demyelination is separate and MORE expensive
         alpha_decay = 0.0001  # 20x slower than accretion
-        self.conductance = self.conductance.multiply(1 - alpha_decay * dt)
+        self.conductance = self.conductance.multiply(1.0 - alpha_decay * dt)
         
-        # Clip to bounds
-        self.conductance.data = np.clip(self.conductance.data, 0.0, self.MAX_ACCRETION)
+        # Clip to bounds entry-wise to avoid any sequence/typing issues
+        from scipy.sparse import lil_matrix
+        self.conductance = self.conductance.tolil()
+        if self.conductance.nnz > 0:
+            data = self.conductance.data  # list-of-lists (one list per row)
+            for row_idx in range(len(data)):
+                row = data[row_idx]
+                for k in range(len(row)):
+                    val = float(row[k])
+                    if val < 0.0:
+                        row[k] = 0.0
+                    elif val > float(self.MAX_ACCRETION):
+                        row[k] = float(self.MAX_ACCRETION)
+                    else:
+                        row[k] = val
         
         # Convert back to CSR for efficient computation
         self.conductance = self.conductance.tocsr()

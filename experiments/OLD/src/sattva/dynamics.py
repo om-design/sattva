@@ -69,6 +69,9 @@ class SATTVADynamics:
         # Hebbian learning
         self.hebbian_learning_rate = hebbian_learning_rate
         self.learning_enabled = False  # Enable explicitly for learning phases
+
+        # Myelination: off by default (slow, long-term infrastructure effect)
+        self.myelination_enabled = False
         
         # History for analysis
         self.activation_history = []
@@ -208,15 +211,17 @@ class SATTVADynamics:
         # Hebbian learning (if enabled)
         if self.learning_enabled:
             self.hebbian_update(dt)
-        
-        # Connection-level myelination (accretion)
-        self.substrate.accretion_dynamics(dt, activation_threshold=self.activation_threshold)
-        
-        # Infrastructure management (every 100 steps - slow process)
-        self.step_count += 1
-        if self.step_count % 100 == 0:
-            infra_info = self.substrate.manage_infrastructure(dt * 100)
-            self.infrastructure_history.append(infra_info)
+
+        # Optional slow myelination (off by default here)
+        if self.myelination_enabled:
+            # Connection-level myelination (accretion)
+            self.substrate.accretion_dynamics(dt, activation_threshold=self.activation_threshold)
+            
+            # Infrastructure management (every 100 steps - slow process)
+            self.step_count += 1
+            if self.step_count % 100 == 0:
+                infra_info = self.substrate.manage_infrastructure(dt * 100)
+                self.infrastructure_history.append(infra_info)
         
         return {
             'energy': energy,
