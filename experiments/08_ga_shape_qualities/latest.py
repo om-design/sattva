@@ -1,12 +1,5 @@
 #!/usr/bin/env python3
-"""Part A: Shape-quality primitives and composite categories.
-
-Goals:
-- Define ~12 GA primitives capturing intrinsic shape qualities and parts.
-- Build composite category patterns: rectangle-like, chair-like, other-shape.
-- Test whether GA-SATTVA dynamics with a simple resonance-based decision
-  can discriminate these categories from noisy cues.
-"""
+"""Part A (clean): Shape-quality primitives, composites, and chair resonance."""
 
 import numpy as np
 from pathlib import Path
@@ -22,7 +15,6 @@ from sattva.ga_sattva_core import (
     GAPattern,
     pattern_from_units,
 )
-
 
 QUALITY_PART_NAMES = [
     "round_curved",
@@ -55,11 +47,6 @@ def allocate_primitive_units(
     units_per_primitive: int = 64,
     seed: int = 123,
 ) -> dict[str, np.ndarray]:
-    """Allocate disjoint unit index subsets for each primitive.
-
-    This keeps the initial geometry simple and interpretable. Later we can
-    introduce controlled overlaps between related primitives if desired.
-    """
     rng = np.random.default_rng(seed)
     indices = np.arange(n_units)
     rng.shuffle(indices)
@@ -78,112 +65,52 @@ def build_quality_part_primitives(
     units: GAUnitSet,
     mapping: dict[str, np.ndarray],
 ) -> dict[str, GAPattern]:
-    primitives: dict[str, GAPattern] = {}
-    for name, idx in mapping.items():
-        primitives[name] = create_ga_primitive(units, idx)
-    return primitives
+    return {name: create_ga_primitive(units, idx) for name, idx in mapping.items()}
 
 
 def build_category_patterns(
     units: GAUnitSet,
     qp_primitives: dict[str, GAPattern],
 ) -> dict[str, GAPattern]:
-    """Construct composite category patterns from quality/part primitives.
-
-    rectangle_like:
-      - rect_part, sharp_cornered, multi_segment, long_extent
-
-    chair_like:
-      - seat_part, leg_part, backrest_part, rect_part, multi_segment
-
-    other_shape:
-      - round_curved, single_segment, blunt_end + some extra generic units
-
-    football_like:
-      - round_curved, long_extent, single_segment, pointed_tip (American football / rugby ball)
-
-    irregular_shape1 / irregular_shape2:
-      - mixtures of sharp/round, multi/single segments with some extra units,
-        sized to have similar footprint to rectangle_like.
-    """
     rng = np.random.default_rng(999)
 
     def union_patterns(names: list[str]) -> np.ndarray:
-        units_list: list[int] = []
+        xs: list[int] = []
         for nm in names:
-            units_list.extend(qp_primitives[nm].active_units.tolist())
-        return np.unique(np.array(units_list, dtype=np.int32))
+            xs.extend(qp_primitives[nm].active_units.tolist())
+        return np.unique(np.array(xs, dtype=np.int32))
 
-    # Rectangle-like: deterministic union of relevant primitives
     rect_support = union_patterns(
-        [
-            "rect_part",
-            "sharp_cornered",
-            "multi_segment",
-            "long_extent",
-        ]
+        ["rect_part", "sharp_cornered", "multi_segment", "long_extent"]
     )
     rectangle_like = create_ga_primitive(units, rect_support)
 
-    # Chair-like: union of parts, sharing rect_part & multi_segment
     chair_support = union_patterns(
-        [
-            "seat_part",
-            "leg_part",
-            "backrest_part",
-            "rect_part",
-            "multi_segment",
-        ]
+        ["seat_part", "leg_part", "backrest_part", "rect_part", "multi_segment"]
     )
     chair_like = create_ga_primitive(units, chair_support)
 
-    # Other-shape: mostly curved / single segment / blunt and a few random extras
-    other_support = union_patterns(
-        [
-            "round_curved",
-            "single_segment",
-            "blunt_end",
-        ]
-    )
+    other_support = union_patterns(["round_curved", "single_segment", "blunt_end"])
     all_units = np.arange(units.n_units)
     rng.shuffle(all_units)
-    other_extra = all_units[: 64]
+    other_extra = all_units[:64]
     other_support = np.unique(np.concatenate([other_support, other_extra]))
     other_shape = create_ga_primitive(units, other_support)
 
-    # Football-like: elongated, rounded ends, single main segment, pointed tips
     football_support = union_patterns(
-        [
-            "round_curved",
-            "long_extent",
-            "single_segment",
-            "pointed_tip",
-        ]
+        ["round_curved", "long_extent", "single_segment", "pointed_tip"]
     )
     football_like = create_ga_primitive(units, football_support)
 
-    # Irregular shapes: similar footprint to rectangle, but mixed qualities
-    irr1_support = union_patterns(
-        [
-            "rect_part",
-            "round_curved",
-            "multi_segment",
-        ]
-    )
+    irr1_support = union_patterns(["rect_part", "round_curved", "multi_segment"])
     rng.shuffle(all_units)
-    irr1_extra = all_units[: 32]
+    irr1_extra = all_units[:32]
     irr1_support = np.unique(np.concatenate([irr1_support, irr1_extra]))
     irregular_shape1 = create_ga_primitive(units, irr1_support)
 
-    irr2_support = union_patterns(
-        [
-            "sharp_cornered",
-            "short_extent",
-            "multi_segment",
-        ]
-    )
+    irr2_support = union_patterns(["sharp_cornered", "short_extent", "multi_segment"])
     rng.shuffle(all_units)
-    irr2_extra = all_units[: 32]
+    irr2_extra = all_units[:32]
     irr2_support = np.unique(np.concatenate([irr2_support, irr2_extra]))
     irregular_shape2 = create_ga_primitive(units, irr2_support)
 
@@ -246,7 +173,6 @@ def run_trial(
             if r > peaks[label]:
                 peaks[label] = r
 
-    # Winner-take-all on peak resonance
     return max(peaks.items(), key=lambda kv: kv[1])[0]
 
 
@@ -261,15 +187,6 @@ def probe_resonance_profile(
     dt: float = 0.1,
     rng: np.random.Generator | None = None,
 ) -> tuple[dict[str, float], dict[str, float]]:
-    """Probe resonance profile for a given target category.
-
-    Returns
-    -------
-    cat_mean : dict[label, mean_resonance]
-        Mean resonance to each category pattern over probes.
-    qp_mean : dict[name, mean_resonance]
-        Mean resonance to each quality/part primitive over probes.
-    """
     if rng is None:
         rng = np.random.default_rng()
 
@@ -301,9 +218,38 @@ def probe_resonance_profile(
     return cat_mean, qp_mean
 
 
+def run_block(
+    units: GAUnitSet,
+    dynamics: GASATTVADynamics,
+    primitives: dict[str, GAPattern],
+    category_labels: list[str],
+    n_trials_per_class: int = 80,
+    rng: np.random.Generator | None = None,
+) -> dict[str, float]:
+    if rng is None:
+        rng = np.random.default_rng()
+
+    correct = {label: 0 for label in category_labels}
+
+    for label in category_labels:
+        for _ in range(n_trials_per_class):
+            pred = run_trial(
+                units,
+                dynamics,
+                primitives,
+                true_label=label,
+                category_labels=category_labels,
+                rng=rng,
+            )
+            if pred == label:
+                correct[label] += 1
+
+    return {label: correct[label] / n_trials_per_class for label in category_labels}
+
+
 def main() -> None:
     print("=" * 70)
-    print("GA-SATTVA Part A: Shape-Quality Composites")
+    print("GA-SATTVA Part A: Shape-Quality Composites (CLEAN)")
     print("=" * 70)
 
     n_units = 4096
@@ -312,28 +258,24 @@ def main() -> None:
 
     print(f"Units: {n_units}, mv_dim: {units.mv_dim}")
 
-    # 1) Allocate GA primitives for intrinsic qualities and parts
     mapping = allocate_primitive_units(
         n_units=n_units,
         primitive_names=QUALITY_PART_NAMES,
         units_per_primitive=64,
         seed=123,
     )
-
     qp_primitives = build_quality_part_primitives(units, mapping)
 
     print("Quality/part primitives:")
     for name in QUALITY_PART_NAMES:
         print(f"  {name}: {len(qp_primitives[name].active_units)} units")
 
-    # 2) Build composite category patterns
     category_patterns = build_category_patterns(units, qp_primitives)
 
     print("\nCategory patterns:")
     for name in CATEGORY_NAMES:
         print(f"  {name}: {len(category_patterns[name].active_units)} units")
 
-    # 3) Set up dynamics using only the category patterns as stored attractors
     dynamics = GASATTVADynamics(
         units=units,
         stored_patterns=[category_patterns[name] for name in CATEGORY_NAMES],
@@ -363,7 +305,6 @@ def main() -> None:
     overall = np.mean(list(accuracies.values()))
     print(f"\nOverall mean accuracy: {overall:.3f}")
 
-    # Chair resonance probe
     print("\n" + "=" * 70)
     print("PHASE: CHAIR_LIKE RESONANCE PROFILE")
     print("=" * 70)
@@ -387,3 +328,7 @@ def main() -> None:
     print("\nQuality/part resonances (mean over probes):")
     for name, val in sorted(qp_mean.items(), key=lambda kv: kv[1], reverse=True):
         print(f"  {name}: {val:.3f}")
+
+
+if __name__ == "__main__":
+    main()
