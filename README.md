@@ -1,4 +1,5 @@
-# SATTVA: Semantic Attractor Training of Transforming Vector Associations
+# SATTVA ⚛ 
+Semantic Attractor Training of Transforming Vector Associations
 
 SATTVA is a new type of AI engine. This research project explores how to build an **Attractor-based Understanding Machine (AUM)**: a system whose core representations are stable, semantic attractors in a dynamical state space rather than just token sequences. Most existing AI models gather a huge amount of statistics from training materials and guess the next most likely word.
 
