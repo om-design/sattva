@@ -38,6 +38,9 @@ CATEGORY_NAMES = [
     "football_like",
     "irregular_shape1",
     "irregular_shape2",
+    "bus_like",
+    "block_like",
+    "brick_like",
 ]
 
 
@@ -80,16 +83,19 @@ def build_category_patterns(
             xs.extend(qp_primitives[nm].active_units.tolist())
         return np.unique(np.array(xs, dtype=np.int32))
 
+    # Rectangle-like: base rect face
     rect_support = union_patterns(
         ["rect_part", "sharp_cornered", "multi_segment", "long_extent"]
     )
     rectangle_like = create_ga_primitive(units, rect_support)
 
+    # Chair-like: seat + legs + backrest built around rect faces
     chair_support = union_patterns(
         ["seat_part", "leg_part", "backrest_part", "rect_part", "multi_segment"]
     )
     chair_like = create_ga_primitive(units, chair_support)
 
+    # Other-shape: curved, single segment, blunt + extras
     other_support = union_patterns(["round_curved", "single_segment", "blunt_end"])
     all_units = np.arange(units.n_units)
     rng.shuffle(all_units)
@@ -97,11 +103,13 @@ def build_category_patterns(
     other_support = np.unique(np.concatenate([other_support, other_extra]))
     other_shape = create_ga_primitive(units, other_support)
 
+    # Football-like: elongated, rounded, pointed
     football_support = union_patterns(
         ["round_curved", "long_extent", "single_segment", "pointed_tip"]
     )
     football_like = create_ga_primitive(units, football_support)
 
+    # Irregular shapes: mixed qualities, rect-ish footprint
     irr1_support = union_patterns(["rect_part", "round_curved", "multi_segment"])
     rng.shuffle(all_units)
     irr1_extra = all_units[:32]
@@ -114,6 +122,35 @@ def build_category_patterns(
     irr2_support = np.unique(np.concatenate([irr2_support, irr2_extra]))
     irregular_shape2 = create_ga_primitive(units, irr2_support)
 
+    # Bus-like: long rectangular body + small curved/pointed parts (wheels/front)
+    bus_support = union_patterns(
+        [
+            "rect_part",  # body
+            "long_extent",
+            "multi_segment",
+            "round_curved",  # wheels/front rounding
+        ]
+    )
+    rng.shuffle(all_units)
+    bus_extra = all_units[:32]
+    bus_support = np.unique(np.concatenate([bus_support, bus_extra]))
+    bus_like = create_ga_primitive(units, bus_support)
+
+    # Block-like: compact, rect, short extent
+    block_support = union_patterns(
+        ["rect_part", "sharp_cornered", "short_extent", "multi_segment"]
+    )
+    block_like = create_ga_primitive(units, block_support)
+
+    # Brick-like: medium-long rect, sharp, multi-segment
+    brick_support = union_patterns(
+        ["rect_part", "sharp_cornered", "multi_segment", "long_extent"]
+    )
+    rng.shuffle(all_units)
+    brick_extra = all_units[:16]
+    brick_support = np.unique(np.concatenate([brick_support, brick_extra]))
+    brick_like = create_ga_primitive(units, brick_support)
+
     return {
         "rectangle_like": rectangle_like,
         "chair_like": chair_like,
@@ -121,6 +158,9 @@ def build_category_patterns(
         "football_like": football_like,
         "irregular_shape1": irregular_shape1,
         "irregular_shape2": irregular_shape2,
+        "bus_like": bus_like,
+        "block_like": block_like,
+        "brick_like": brick_like,
     }
 
 
