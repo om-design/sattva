@@ -1,0 +1,8 @@
+# paste sattva_engine.py and train.py into this directory
+
+docker build -t sattva .
+docker run --rm sattva
+
+# or without docker:
+pip install numpy
+python train.py

@@ -1,0 +1,66 @@
+=================================================================
+  SATTVA-GA v2.0 — Adversarial Repetition Bias Stress Test
+  Simulation Report
+=================================================================
+
+SCENARIO
+  Phase 1  [steps   0–199]  Normal balanced input
+  Phase 2  [steps 200–399]  Adversarial: Well 0 flooded 10x
+  Phase 3  [steps 400–599]  Recovery: balanced input restored
+
+GA BIAS-AGNOSTIC GUARANTEE (Spec §XII)
+  Initial blade orientations recorded at step 0.
+  Cosine similarity to initial blades (1.0 = no drift):
+    Normal    : mean=1.00000  min=1.00000  max=1.00000
+    Biased    : mean=1.00000  min=1.00000  max=1.00000
+    Recovery  : mean=1.00000  min=1.00000  max=1.00000
+
+  → Repetition cannot rotate grade-1 blades.
+    Any drift near 1.0 confirms the GA invariance guarantee holds.
+
+CURIOSITY  [C = H(probs) + η·Shear]
+  Normal    :  mean=132.483  std=84.720  min=4.099  max=312.654
+  Biased    :  mean=37.066  std=47.432  min=10.063  max=331.483
+  Recovery  :  mean=137.994  std=86.932  min=11.081  max=329.336
+
+SHEAR  [|E^ICL − E^RDL| + |E^ICL − E^RTL|]
+  Normal    :  mean=165.597  std=105.896  min=5.124  max=390.818
+  Biased    :  mean=46.331  std=59.287  min=12.579  max=414.354
+  Recovery  :  mean=172.489  std=108.663  min=13.851  max=411.670
+
+WELL DEPTHS at phase ends
+  Well 0 ← TARGETED:
+    Normal end    : 2.4962
+    Biased end    : 10.8482
+    Recovery end  : 11.8310
+  Well 1:
+    Normal end    : 0.4312
+    Biased end    : 0.0000
+    Recovery end  : 0.3353
+  Well 2:
+    Normal end    : 0.0413
+    Biased end    : 0.0000
+    Recovery end  : 0.0273
+
+EPIPHANY EVENTS
+  None triggered during online processing.
+  Total invariant primitives at end: 3
+
+ROTOR PREDICTION ERROR (E^PCL)
+  Normal    :  mean=169.523  std=152.761  min=0.370  max=706.174
+  Biased    :  mean=56.072  std=66.676  min=2.589  max=835.633
+  Recovery  :  mean=187.971  std=150.930  min=0.946  max=662.627
+
+INTERPRETATION
+  • Curiosity and shear are expected to SPIKE during Phase 2,
+    signalling that repetition pressure is creating cross-layer tension.
+  • Blade orientation cosine should remain ≈1.0 throughout,
+    proving that grade-0 scalar accumulation cannot bend higher-grade
+    invariant geometry (the core GA guarantee of §XII).
+  • Well 0 depth should grow disproportionately in Phase 2,
+    while curiosity flags the distortion rather than concealing it.
+  • On recovery, shear should fall as the field re-balances.
+  • Epiphany (if triggered) synthesises a higher-grade blade from
+    the two most-similar wells, upgrading representational capacity.
+
+=================================================================

@@ -1,0 +1,871 @@
+{
+  "run_id": "2026-03-11T16:56:44.294994+00:00",
+  "run_started_at": "2026-03-11T16:56:44.294994+00:00",
+  "status": {
+    "step": 1700,
+    "primitives": 3,
+    "pillars": 23,
+    "orphans": 0,
+    "epiphanies": 36,
+    "cost": 4042,
+    "prim_myel": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "epiphanies": [
+    {
+      "step": 451,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        1,
+        8
+      ],
+      "pillar_names": [
+        "point",
+        "velocity"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.705621055867386,
+      "magnitude": 19.499514746411556,
+      "id": "6916afdb-0886-4e6e-94a6-0a8697bfd755"
+    },
+    {
+      "step": 486,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        2,
+        10
+      ],
+      "pillar_names": [
+        "line",
+        "pendulum"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.8209182169246846,
+      "magnitude": 24.180510168197728,
+      "id": "4ee8c6be-738d-4df9-87ff-322042492232"
+    },
+    {
+      "step": 521,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        7,
+        10
+      ],
+      "pillar_names": [
+        "triangle",
+        "pendulum"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.8945549171779036,
+      "magnitude": 31.417867147330973,
+      "id": "250ca4c7-1b12-44cd-8775-879f45716bb4"
+    },
+    {
+      "step": 556,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        4,
+        8
+      ],
+      "pillar_names": [
+        "tangent",
+        "velocity"
+      ],
+      "shared_prims": 2,
+      "resonance": 1.2148045695213243,
+      "magnitude": 28.749000722242087,
+      "id": "2ff00d0d-08ab-4f0a-9310-e61c94bf4420"
+    },
+    {
+      "step": 591,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        7,
+        10
+      ],
+      "pillar_names": [
+        "triangle",
+        "pendulum"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.8873168037583024,
+      "magnitude": 38.60585985680166,
+      "id": "4d60957d-8125-466e-8c90-2fc1d6b0af67"
+    },
+    {
+      "step": 626,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        1,
+        10
+      ],
+      "pillar_names": [
+        "point",
+        "pendulum"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.8064338814411578,
+      "magnitude": 32.09176318807187,
+      "id": "1f4b4d65-9431-40e2-8e43-242874ddf364"
+    },
+    {
+      "step": 661,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        7,
+        10
+      ],
+      "pillar_names": [
+        "triangle",
+        "pendulum"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.8845458450381692,
+      "magnitude": 45.386054563198755,
+      "id": "04da5b67-47ee-427c-a01e-bf996fac302c"
+    },
+    {
+      "step": 696,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        7,
+        10
+      ],
+      "pillar_names": [
+        "triangle",
+        "pendulum"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.8792287661841124,
+      "magnitude": 49.95263142678467,
+      "id": "fcfc9f65-42af-4e3e-8c47-5d19b788c2ef"
+    },
+    {
+      "step": 731,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        1,
+        8
+      ],
+      "pillar_names": [
+        "point",
+        "velocity"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.7436429573621814,
+      "magnitude": 36.55813528613508,
+      "id": "d98d3f30-fcc1-43c1-8169-2d3fa1b7fa09"
+    },
+    {
+      "step": 766,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        2,
+        12
+      ],
+      "pillar_names": [
+        "line",
+        "collision"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.6905247523562439,
+      "magnitude": 36.176534839707685,
+      "id": "84d3d14e-9800-4c52-a300-c8bb537d1fd4"
+    },
+    {
+      "step": 801,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        7,
+        10
+      ],
+      "pillar_names": [
+        "triangle",
+        "pendulum"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.8671930972865739,
+      "magnitude": 58.73566501363172,
+      "id": "8a6a246b-c036-4c07-9f10-db5b1fbc015e"
+    },
+    {
+      "step": 836,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        3,
+        10
+      ],
+      "pillar_names": [
+        "circle",
+        "pendulum"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.9070015143531003,
+      "magnitude": 64.05695200112805,
+      "id": "f59a955a-55c1-4ede-9d6c-c28137e61f11"
+    },
+    {
+      "step": 871,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        1,
+        12
+      ],
+      "pillar_names": [
+        "point",
+        "collision"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.9243565914376372,
+      "magnitude": 39.92459089735954,
+      "id": "e736cbe7-2db6-418c-ae27-679db821d69b"
+    },
+    {
+      "step": 906,
+      "tags": [
+        "geometry",
+        "music"
+      ],
+      "pillars": [
+        7,
+        16
+      ],
+      "pillar_names": [
+        "triangle",
+        "melody"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.9683700543121574,
+      "magnitude": 40.281193522659414,
+      "id": "ce22a999-bb3b-4a7b-ab1e-3185f1e1f957"
+    },
+    {
+      "step": 941,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        7,
+        8
+      ],
+      "pillar_names": [
+        "triangle",
+        "velocity"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.8540091213379314,
+      "magnitude": 56.585718333469764,
+      "id": "ce19173d-112b-48c8-bac8-600162ab7702"
+    },
+    {
+      "step": 976,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        7,
+        8
+      ],
+      "pillar_names": [
+        "triangle",
+        "velocity"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.8547095888217496,
+      "magnitude": 58.089852750198766,
+      "id": "89373238-df64-418b-aefc-23e272dac389"
+    },
+    {
+      "step": 1011,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        2,
+        10
+      ],
+      "pillar_names": [
+        "line",
+        "pendulum"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.8415888168622192,
+      "magnitude": 59.67019720075771,
+      "id": "9b7ec5ae-2772-415d-a8d4-048bff3f5f1f"
+    },
+    {
+      "step": 1046,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        1,
+        8
+      ],
+      "pillar_names": [
+        "point",
+        "velocity"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.775322882642335,
+      "magnitude": 56.019148451325634,
+      "id": "8050fedf-83a6-4fca-8886-9dc96495cc70"
+    },
+    {
+      "step": 1081,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        7,
+        10
+      ],
+      "pillar_names": [
+        "triangle",
+        "pendulum"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.8467517027241507,
+      "magnitude": 68.70768148826131,
+      "id": "b62606ab-0009-4250-8f18-2cb8db1cb46d"
+    },
+    {
+      "step": 1116,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        7,
+        10
+      ],
+      "pillar_names": [
+        "triangle",
+        "pendulum"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.8438228488186863,
+      "magnitude": 69.85638778841385,
+      "id": "885c60ed-4705-410a-8a81-af1726d60ac0"
+    },
+    {
+      "step": 1151,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        1,
+        8
+      ],
+      "pillar_names": [
+        "point",
+        "velocity"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.7812054674487001,
+      "magnitude": 59.089749485672364,
+      "id": "81a78c73-f338-4486-88ea-5ed7feb0d08d"
+    },
+    {
+      "step": 1186,
+      "tags": [
+        "physics",
+        "music"
+      ],
+      "pillars": [
+        10,
+        15
+      ],
+      "pillar_names": [
+        "pendulum",
+        "harmony"
+      ],
+      "shared_prims": 2,
+      "resonance": 1.2487023872535934,
+      "magnitude": 49.473069716745734,
+      "id": "8f377f86-9bc8-40f8-a0ed-cfe639b4d989"
+    },
+    {
+      "step": 1221,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        3,
+        10
+      ],
+      "pillar_names": [
+        "circle",
+        "pendulum"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.9236993788819439,
+      "magnitude": 80.61376427585023,
+      "id": "fea7fc63-2343-40a1-b81b-c71f22d93a68"
+    },
+    {
+      "step": 1256,
+      "tags": [
+        "physics",
+        "music"
+      ],
+      "pillars": [
+        10,
+        15
+      ],
+      "pillar_names": [
+        "pendulum",
+        "harmony"
+      ],
+      "shared_prims": 2,
+      "resonance": 1.2450143895403407,
+      "magnitude": 52.19857937713865,
+      "id": "8757acc4-34d2-45dc-8f9a-a2b269f437cc"
+    },
+    {
+      "step": 1291,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        7,
+        8
+      ],
+      "pillar_names": [
+        "triangle",
+        "velocity"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.8491449702870519,
+      "magnitude": 63.031317671349896,
+      "id": "b05c11f4-e021-4700-9739-5642290bbc6c"
+    },
+    {
+      "step": 1326,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        1,
+        8
+      ],
+      "pillar_names": [
+        "point",
+        "velocity"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.7981429980024111,
+      "magnitude": 66.02036722997791,
+      "id": "8313650b-43cb-40ac-9dc8-94b51902718f"
+    },
+    {
+      "step": 1361,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        1,
+        10
+      ],
+      "pillar_names": [
+        "point",
+        "pendulum"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.7937151630160424,
+      "magnitude": 78.42937006680472,
+      "id": "c2d2a26b-babc-4ded-bdc4-b7949572cbf3"
+    },
+    {
+      "step": 1396,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        1,
+        10
+      ],
+      "pillar_names": [
+        "point",
+        "pendulum"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.7920710478369383,
+      "magnitude": 79.92081134002234,
+      "id": "4bbeb484-f2ea-4384-80b8-ce6cef072f9e"
+    },
+    {
+      "step": 1431,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        3,
+        10
+      ],
+      "pillar_names": [
+        "circle",
+        "pendulum"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.9398931919842626,
+      "magnitude": 86.89788156022243,
+      "id": "a7f855e9-ddb5-4520-86ec-c6df59dd4253"
+    },
+    {
+      "step": 1466,
+      "tags": [
+        "physics",
+        "biology"
+      ],
+      "pillars": [
+        8,
+        21
+      ],
+      "pillar_names": [
+        "velocity",
+        "membrane"
+      ],
+      "shared_prims": 2,
+      "resonance": 1.0027547005258148,
+      "magnitude": 72.9915191788791,
+      "id": "1115bede-0931-418d-a6cc-e5cffed172df"
+    },
+    {
+      "step": 1501,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        7,
+        10
+      ],
+      "pillar_names": [
+        "triangle",
+        "pendulum"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.8121672189780056,
+      "magnitude": 82.33725305007758,
+      "id": "5a5d4547-ebcf-4f2e-83b0-63a5c735f69f"
+    },
+    {
+      "step": 1536,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        3,
+        10
+      ],
+      "pillar_names": [
+        "circle",
+        "pendulum"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.9489291537775059,
+      "magnitude": 93.35049412487453,
+      "id": "05a2ea7a-6752-4942-b390-046241152dd6"
+    },
+    {
+      "step": 1571,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        7,
+        10
+      ],
+      "pillar_names": [
+        "triangle",
+        "pendulum"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.8107429020961684,
+      "magnitude": 86.86239166232637,
+      "id": "f2fbb62a-e111-4016-b451-33296d12b330"
+    },
+    {
+      "step": 1606,
+      "tags": [
+        "physics",
+        "music"
+      ],
+      "pillars": [
+        10,
+        15
+      ],
+      "pillar_names": [
+        "pendulum",
+        "harmony"
+      ],
+      "shared_prims": 2,
+      "resonance": 1.2099040436362334,
+      "magnitude": 73.88647955673333,
+      "id": "60517a24-6b30-4ecb-a949-4545b6ac59ce"
+    },
+    {
+      "step": 1641,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        7,
+        10
+      ],
+      "pillar_names": [
+        "triangle",
+        "pendulum"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.8117934093491712,
+      "magnitude": 92.15536100393052,
+      "id": "23654dbf-9ac7-4f8a-88d5-5424a4ca6323"
+    },
+    {
+      "step": 1676,
+      "tags": [
+        "geometry",
+        "physics"
+      ],
+      "pillars": [
+        7,
+        10
+      ],
+      "pillar_names": [
+        "triangle",
+        "pendulum"
+      ],
+      "shared_prims": 1,
+      "resonance": 0.8011514661410607,
+      "magnitude": 93.96663735862997,
+      "id": "aed80641-a0f5-45f7-ab40-8f7e3863dfad"
+    }
+  ],
+  "primitives": [
+    {
+      "id": 0,
+      "best_base": "point",
+      "best_sim": 0.993,
+      "myel": 1.0,
+      "n_pillars": 14
+    },
+    {
+      "id": 1,
+      "best_base": "line",
+      "best_sim": 0.987,
+      "myel": 1.0,
+      "n_pillars": 15
+    },
+    {
+      "id": 2,
+      "best_base": "circle",
+      "best_sim": 0.995,
+      "myel": 1.0,
+      "n_pillars": 11
+    }
+  ],
+  "pillar_counts": {
+    "geometry": 8,
+    "physics": 5,
+    "music": 6,
+    "biology": 4
+  },
+  "domain_primitives": {
+    "geometry": [
+      0,
+      1,
+      2
+    ],
+    "physics": [
+      0,
+      1,
+      2
+    ],
+    "music": [
+      0,
+      1,
+      2
+    ],
+    "biology": [
+      0,
+      1,
+      2
+    ]
+  },
+  "pillar_metadata": {
+    "0": {
+      "auto_label": null,
+      "user_label": null,
+      "examples": []
+    },
+    "1": {
+      "auto_label": null,
+      "user_label": null,
+      "examples": []
+    },
+    "2": {
+      "auto_label": null,
+      "user_label": null,
+      "examples": []
+    },
+    "3": {
+      "auto_label": null,
+      "user_label": null,
+      "examples": []
+    },
+    "4": {
+      "auto_label": null,
+      "user_label": null,
+      "examples": []
+    },
+    "5": {
+      "auto_label": null,
+      "user_label": null,
+      "examples": []
+    },
+    "6": {
+      "auto_label": null,
+      "user_label": null,
+      "examples": []
+    },
+    "7": {
+      "auto_label": null,
+      "user_label": null,
+      "examples": []
+    },
+    "8": {
+      "auto_label": null,
+      "user_label": null,
+      "examples": []
+    },
+    "9": {
+      "auto_label": null,
+      "user_label": null,
+      "examples": []
+    },
+    "10": {
+      "auto_label": null,
+      "user_label": null,
+      "examples": []
+    },
+    "11": {
+      "auto_label": null,
+      "user_label": null,
+      "examples": []
+    },
+    "12": {
+      "auto_label": null,
+      "user_label": null,
+      "examples": []
+    },
+    "13": {
+      "auto_label": null,
+      "user_label": null,
+      "examples": []
+    },
+    "14": {
+      "auto_label": null,
+      "user_label": null,
+      "examples": []
+    },
+    "15": {
+      "auto_label": null,
+      "user_label": null,
+      "examples": []
+    },
+    "16": {
+      "auto_label": null,
+      "user_label": null,
+      "examples": []
+    },
+    "17": {
+      "auto_label": null,
+      "user_label": null,
+      "examples": []
+    },
+    "18": {
+      "auto_label": null,
+      "user_label": null,
+      "examples": []
+    },
+    "19": {
+      "auto_label": null,
+      "user_label": null,
+      "examples": []
+    },
+    "20": {
+      "auto_label": null,
+      "user_label": null,
+      "examples": []
+    },
+    "21": {
+      "auto_label": null,
+      "user_label": null,
+      "examples": []
+    },
+    "22": {
+      "auto_label": null,
+      "user_label": null,
+      "examples": []
+    }
+  }
+}

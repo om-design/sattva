@@ -1,0 +1,16 @@
+container:
+  path: "artifacts/snapshots/baby_sattva.pkl"
+
+run:
+  phases:
+    - name: "square_relations_2d_a"
+      module: "training.p12_relations_2d"
+      func: "run_square_relations_2d"
+      steps: 20000
+      log_every: 1000
+
+    - name: "poly_relations_2d_a"
+      module: "training.p12_relations_2d"
+      func: "run_poly_relations_2d"
+      steps: 20000
+      log_every: 1000
