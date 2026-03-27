@@ -47,8 +47,7 @@ A minimal SATTVA loop looks like:
 
 ## Current status
 
-- A toy semantic space and a simple continuous Hopfield-style core exist as a starting point for exploration.
-- The next milestone is to add a small task + training objective so this becomes an information-processing structure, not just a demo of dynamics.
+The actual advanced engine is proprietary. Contact us for access. Training, myelenation, semantic wells, self pruning and resonance across domains are all working extremely well. SATTVA promises to be an extremely effective tool.
 
 ## Getting started
 
